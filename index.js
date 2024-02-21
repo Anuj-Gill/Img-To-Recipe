@@ -38,7 +38,8 @@ app.post('/backend/recipe',upload.single('image') ,async (req,res) => {
         const prompt = `You will receive an image file from the user, containing a photograph of the ingredients they have available.
         The image will have all ingredients clearly visible and identifiable.
         The ingredients may include vegetables, fruits, meats, grains, spices, and other food items typically used in cooking.
-        Extract relevant features from each ingredient, such as shape, color, texture, and size. Also keep in mind that i will be displaying the output on my website. So return in html in designed way so it looks good on the website. Make sure you always return html, not markdown every time. Also if you don't see any ingrediant(like if you see any human face), then reply approprately
+        Extract relevant features from each ingredient, such as shape, color, texture, and size. Also keep in mind that i will be displaying the output on my website. So return in html in designed way so it looks good on the website. Make sure you always return html, not markdown every time. 
+        Also if you don't see any ingredient(like if you see any human face), then say Please provide an image of ingredients.
         
         Output:
         
@@ -47,11 +48,12 @@ app.post('/backend/recipe',upload.single('image') ,async (req,res) => {
         Present the recommended recipes in a user-friendly format, such as a ranked list or interactive interface.
         
         Output will be in the form don't add anything else
-        *Recipe name*
         
-        *List of Ingredients*
+        Recipe name
         
-        *Instructions*
+        List of Ingredients
+        
+        Instructions
 
         `;
       
